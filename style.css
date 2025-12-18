@@ -1,0 +1,135 @@
+html, body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #ce1713, #d5b534, #e1e1e1, #0f7833);
+  background-size: 600% 600%;
+  animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-btn {
+  position: fixed;
+  bottom: 50px;
+  left: 40%;
+  transform: translateX(-50%);
+  padding: 12px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0px;
+  border-width: 2px;
+  border-color: black;
+  background: #edebe4;
+  color: black;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.download-btn:hover {
+  background: #ffde21;
+}
+
+.reload-btn {
+  position: fixed;
+  bottom: 50px;
+  left: 60%;
+  transform: translateX(-50%);
+  padding: 12px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0px;
+  border-width: 2px;
+  border-color: black;
+  background: #edebe4;
+  color: black;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.25s ease;
+}
+
+.reload-btn:hover {
+  background: #ffde21;
+}
+
+.capture-btn {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 12px;
+  border-radius: 0px;
+  border-width: 2px;
+  border-color: black;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.capture-btn:hover {
+  background: #ffde21;
+}
+
+.preview-overlay {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80vw;
+  max-height: 80vh;
+  display: block;
+  border-radius: 0px;
+  box-shadow: 20px 20px 20px yellow;
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+
+  background: white;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
